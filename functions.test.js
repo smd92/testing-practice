@@ -38,3 +38,22 @@ test("performs basic mathematical operations for numbers 1, 2", () => {
     divide: 0.5,
   });
 });
+
+//caesarCipher test
+const caesarCipher = functions.caesarCipher;
+
+test("changes 'abC, Z' to 'bcd, a", () => {
+  expect(caesarCipher("abC, Z")).toMatch(/bcd, a/);
+});
+
+//analyzeArray test
+const analyzeArray = functions.analyzeArray;
+
+test("get average, min, max, and length of [1,8,3,4,2,6]", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});
